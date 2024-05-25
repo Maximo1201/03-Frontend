@@ -27,6 +27,10 @@ const rawTheme = createTheme({
       main: green[500],
       dark: green[700],
     },
+    common: {
+      black: "#000",
+      white: "#fff",
+    },
   },
   typography: {
     fontFamily: "'Inter', sans-serif",
