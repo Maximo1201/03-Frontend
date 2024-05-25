@@ -8,22 +8,22 @@ import Button from "../components/Button";
 import Typography from "../components/Typography";
 
 const comments = [
-    {
-        avatar: "R",
-        title: "Rice and Beans",
-        subheader: "September 14, 2016",
-    },
-    {
-        avatar: "S",
-        title: "Shrimp and Chorizo Paella",
-        subheader: "September 14, 2016",
-    },
-    {
-        avatar: "T",
-        title: "Tiramisu",
-        subheader: "September 14, 2016",
-    },
-    ];
+  {
+    avatar: "R",
+    title: "Rice and Beans",
+    subheader: "September 14, 2016",
+  },
+  {
+    avatar: "S",
+    title: "Shrimp and Chorizo Paella",
+    subheader: "September 14, 2016",
+  },
+  {
+    avatar: "T",
+    title: "Tiramisu",
+    subheader: "September 14, 2016",
+  },
+];
 
 const ProductComments = () => {
   const [open, setOpen] = React.useState(false);
@@ -33,13 +33,19 @@ const ProductComments = () => {
     setOpen(true);
   };
 
-
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
-    <Container component="section" sx={{ my: 10, display: "flex" }}>
+    <Container
+      component="section"
+      sx={{
+        my: 10,
+        display: "flex",
+        flexDirection: { md: "row", xs: "column" },
+      }}
+    >
       <Grid container>
         <Grid item xs={12} md={8} sx={{ zIndex: 1 }}>
           <Box
@@ -55,16 +61,34 @@ const ProductComments = () => {
             <Box
               component="form"
               onSubmit={handleSubmit}
-              sx={{ maxWidth: 800, display: "flex", flexDirection: "column", gap: "1rem", justifyContent: "center", alignItems: "center" }}
+              sx={{
+                maxWidth: 800,
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               <Typography
                 variant="h4"
                 gutterBottom
-                sx={{ color: "secondary.main", fontSize: "1.5rem", fontWeight: 900 }}
+                sx={{
+                  color: "secondary.main",
+                  fontSize: "1.5rem",
+                  fontWeight: 900,
+                }}
               >
                 ¿YA TUVISTE CLASES CON NOSOTROS?
               </Typography>
-              <Typography variant="h4" sx={{ color: "common.white", fontSize: "1.5rem", textTransform: "Capitalize" }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  color: "common.white",
+                  fontSize: "1.5rem",
+                  textTransform: "Capitalize",
+                }}
+              >
                 ¡Cuentanos tu experiencia!
               </Typography>
               <TextareaAutosize
@@ -90,17 +114,49 @@ const ProductComments = () => {
                 ENVIAR COMENTARIO
               </Button>
             </Box>
-            <div style={{position: "absolute", top: "0%", left: "115%", transform: "translate(-50%, -50%)", width: "max-content", height: "max-content"}}>
+            <Box
+              id="commentsinWeb"
+              sx={{ display: { md: "block", xs: "none" } }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  top: "0%",
+                  left: "115%",
+                  transform: "translate(-50%, -50%)",
+                  width: "max-content",
+                  height: "max-content",
+                }}
+              >
                 <CardComment key={comments[0].title} {...comments[0]} />
-            </div>
+              </div>
 
-            <div style={{position: "absolute", top: "40%", left: "145%", transform: "translate(-50%, -50%)", width: "max-content", height: "max-content"}}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "40%",
+                  left: "145%",
+                  transform: "translate(-50%, -50%)",
+                  width: "max-content",
+                  height: "max-content",
+                }}
+              >
                 <CardComment key={comments[1].title} {...comments[1]} />
-            </div>
+              </div>
 
-            <div style={{position: "absolute", top: "80%", left: "125%", transform: "translate(-50%, -50%)", width: "max-content", height: "max-content"}}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "80%",
+                  left: "125%",
+                  transform: "translate(-50%, -50%)",
+                  width: "max-content",
+                  height: "max-content",
+                }}
+              >
                 <CardComment key={comments[2].title} {...comments[2]} />
-            </div>
+              </div>
+            </Box>
           </Box>
         </Grid>
         <Grid
@@ -136,7 +192,11 @@ const ProductComments = () => {
           />
         </Grid>
       </Grid>
-      
+      <Box id="commentsinMobile" sx={{ display: { md: "none", xs: "flex" }, flexDirection: "column", gap: 2, mt: 4 }}>
+        <CardComment key={comments[0].title} {...comments[0]} />
+        <CardComment key={comments[1].title} {...comments[1]} />
+        <CardComment key={comments[2].title} {...comments[2]} />
+      </Box>
     </Container>
   );
 };

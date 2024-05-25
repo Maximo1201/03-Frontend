@@ -12,7 +12,7 @@ interface CardCommentProps {
 
 const CardComment = ({ avatar, title, subheader }: CardCommentProps) => {
   return (
-    <Card sx={{ minWidth: 325, maxWidth: 345, borderRadius: 3, padding:".0 0 .5rem 0" }} elevation={3}>
+    <Card sx={{ minWidth: 325, borderRadius: 3, padding:".0 0 .5rem 0" }} elevation={3}>
       <CardContent sx={{ padding: "1.4rem 1rem 0rem 2rem" }}>
         <Typography
           variant="h5"
