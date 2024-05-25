@@ -10,7 +10,7 @@ import ProductValues from "../views/ProductValues";
 export default function Home() {
   return (
     <>
-     <AppAppBar />
+      <AppAppBar />
       <ProductHero />
       <ProductValues />
       <ProductCategories />
