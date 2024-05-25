@@ -1,10 +1,9 @@
+import ProductComments from "@/views/ProductComments";
 import AppAppBar from "../views/AppAppBar";
 import AppFooter from "../views/AppFooter";
-import ProductCTA from "../views/ProductCTA";
 import ProductHero from "../views/ProductHero";
 import ProductHowItWorks from "../views/ProductHowItWorks";
 import ProductPacks from "../views/ProductPacks";
-import ProductSmokingHero from "../views/ProductSmokingHero";
 import ProductValues from "../views/ProductValues";
 
 export default function Home() {
@@ -15,8 +14,8 @@ export default function Home() {
       <ProductValues />
       <ProductPacks />
       <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
+      {/* <ProductCTA /> */}
+      <ProductComments />
       <AppFooter />
     </>
   )

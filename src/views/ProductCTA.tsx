@@ -1,11 +1,10 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import Typography from "../components/Typography";
-import TextField from "../components/TextField";
-import Snackbar from "../components/Snackbar";
+import Grid from "@mui/material/Grid";
+import * as React from "react";
 import Button from "../components/Button";
+import TextField from "../components/TextField";
+import Typography from "../components/Typography";
 
 function ProductCTA() {
   const [open, setOpen] = React.useState(false);
@@ -93,11 +92,6 @@ function ProductCTA() {
           />
         </Grid>
       </Grid>
-      <Snackbar
-        open={open}
-        closeFunc={handleClose}
-        message="We will send you our best offers, once a week."
-      />
     </Container>
   );
 }
