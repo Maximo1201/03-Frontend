@@ -1,19 +1,8 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import * as React from "react";
-import TextField from "../components/TextField";
+import Image from "next/image";
 import Typography from "../components/Typography";
-
-function Copyright() {
-  return (
-    <React.Fragment>
-      {"© "}
-     
-      {new Date().getFullYear()}
-    </React.Fragment>
-  );
-}
 
 const iconStyle = {
   width: 48,
@@ -21,99 +10,79 @@ const iconStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "warning.main",
   mr: 1,
-  "&:hover": {
-    bgcolor: "warning.dark",
-  },
 };
-
-const LANGUAGES = [
-  {
-    code: "en-US",
-    name: "English",
-  },
-  {
-    code: "fr-FR",
-    name: "Français",
-  },
-];
 
 export default function AppFooter() {
   return (
     <Typography
       component="footer"
-      sx={{ display: "flex", bgcolor: "secondary.light" }}
+      sx={{ display: "flex", bgcolor: "primary.main" }}
     >
-      <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justifyContent="flex-end"
-              spacing={2}
-              sx={{ height: 120 }}
-            >
-              <Grid item sx={{ display: "flex" }}>
-                <Box component="a" href="https://mui.com/" sx={iconStyle}>
-                  <img src="/appFooterFacebook.png" alt="Facebook" />
+      <Container sx={{ my: 4 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Typography
+                gutterBottom
+                sx={{ color: "secondary.main", fontSize: 25, fontWeight: 700}}
+              >
+                SIGUE NUESTRAS REDES SOCIALES
+              </Typography>
+              <Box sx={{ display: "flex" }}>
+                <Box sx={iconStyle}>
+                  <Image
+                    src="icons/facebook.svg"
+                    alt="facebook"
+                    width={48}
+                    height={48}
+                  />
                 </Box>
-                <Box
-                  component="a"
-                  href="https://twitter.com/MUI_hq"
-                  sx={iconStyle}
-                >
-                  <img src="/appFooterTwitter.png" alt="Twitter" />
+                <Box sx={iconStyle}>
+                  <Image
+                    src="icons/instagram.svg"
+                    alt="instagram"
+                    width={45}
+                    height={48}
+                  />
                 </Box>
-              </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
-            <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
-              <Box component="li" sx={{ py: 0.5 }}>
-               
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                
+                <Box sx={iconStyle}>
+                  <Image
+                    src="icons/linkedIn.svg"
+                    alt="twitter"
+                    width={48}
+                    height={48}
+                  />
+                </Box>
+                <Box sx={iconStyle}>
+                  <Image
+                    src="icons/tiktok.svg"
+                    alt="youtube"
+                    width={48}
+                    height={48}
+                  />
+                </Box>
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              size="medium"
-              variant="standard"
-              SelectProps={{
-                native: true,
-              }}
-              sx={{ mt: 1, width: 150 }}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {"Icons made by "}
-              
-              {" from "}
-             
-              {" is licensed by "}
-             
-            </Typography>
+
+          <Grid item xs={12} sm={6}>
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <Typography
+                variant="h4"
+                gutterBottom
+                sx={{ color: "secondary.main" }}
+              >
+                DRIVE FLUENCY
+              </Typography>
+              <Typography
+                variant="h4"
+                gutterBottom
+                sx={{ color: "secondary.light" }}
+              >
+                APRENDÉ A CONDUCIR
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>
