@@ -32,34 +32,7 @@ const markStyleMapping: {
 };
 
 const StyledTypography = styled(MuiTypography)(({ theme }) => ({
-  [`&.${markStyleMapping.center.h2}`]: {
-    height: 4,
-    width: 73,
-    display: "block",
-    margin: `${theme.spacing(1)} auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  [`&.${markStyleMapping.center.h3}`]: {
-    height: 4,
-    width: 55,
-    display: "block",
-    margin: `${theme.spacing(1)} auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  [`&.${markStyleMapping.center.h4}`]: {
-    height: 4,
-    width: 55,
-    display: "block",
-    margin: `${theme.spacing(1)} auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  [`&.${markStyleMapping.left.h6}`]: {
-    height: 2,
-    width: 28,
-    display: "block",
-    marginTop: theme.spacing(0.5),
-    background: "currentColor",
-  },
+ 
 }));
 
 interface ExtraTypographyProps {
