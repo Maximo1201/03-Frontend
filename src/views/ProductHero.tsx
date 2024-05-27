@@ -1,8 +1,8 @@
+import { Box, Button } from "@mui/material";
 import Typography from "../components/Typography";
 import ProductHeroLayout from "./ProductHeroLayout";
 
-const backgroundImage =
-  "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80";
+const backgroundImage = "/heroImagen.jpg";
 
 export default function ProductHero() {
   return (
@@ -13,36 +13,29 @@ export default function ProductHero() {
         backgroundPosition: "center",
       }}
     >
-      {/* Increase the network loading priority of the background image. */}
-      <img
-        style={{ display: "none" }}
-        src={backgroundImage}
-        alt="increase priority"
-      />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
-      </Typography>
-      <Typography
-        color="inherit"
-        align="center"
-        variant="h5"
-        sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
-      >
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
-      </Typography>
-      {/* <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        component={RouterLink}
-        to="/sign-up/"
-        sx={{ minWidth: 200 }}
-      >
-        Register
-      </Button> */}
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
-      </Typography>
+      <Box sx={{ textAlign: "center", marginRight: {xs: 0, md: "125px" } }} >
+        <Typography color="inherit" variant="h2" sx={{ fontSize: "50px", fontWeight: 900}}>
+          pierde el miedo y <br /> aprende a conducir
+        </Typography>
+        <Typography
+          color="secondary.main"
+          align="center"
+          variant="h5"
+          sx={{ fontSize: "45px", textTransform: "uppercase", fontWeight: 900 }}
+        >
+          ¡Empieza hoy!
+        </Typography>
+        <Button
+          variant="contained"
+          size="large"
+
+          sx={{ minWidth: 200, textTransform: "none", fontSize: "28px", marginTop: "27px" }}
+        >
+          Ver Packs de Clases
+        </Button>
+
+      </Box>
+
     </ProductHeroLayout>
   );
 }
