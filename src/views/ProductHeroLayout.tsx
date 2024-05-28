@@ -37,45 +37,25 @@ export default function ProductHeroLayout(
   const { sxBackground, children } = props;
 
   return (
-    <ProductHeroLayoutRoot>
-      <Container
+    <ProductHeroLayoutRoot sx={{ margin: "85px 0 0" }}>
+      <Box sx={{ flex: 1, width: "100%", display: "flex" }}>
+        <Box sx={{ ml: "auto", width: "700px" }}>
+          {children}
+        </Box>
+      </Box>
+      <Box
         sx={{
-          mt: 3,
-          mb: 14,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+          backgroundColor: "common.black",
+          opacity: 0.2,
+          zIndex: -1,
         }}
-      >
-        <img
-          src="/productHeroWonder.png"
-          alt="wonder"
-          width="147"
-          height="80"
-        />
-        {children}
-        <Box
-          sx={{
-            position: "absolute",
-            left: 0,
-            right: 0,
-            top: 0,
-            bottom: 0,
-            backgroundColor: "common.black",
-            opacity: 0.5,
-            zIndex: -1,
-          }}
-        />
-        <Background sx={sxBackground} />
-        <Box
-          component="img"
-          src="/productHeroArrowDown.png"
-          height="16"
-          width="12"
-          alt="arrow down"
-          sx={{ position: "absolute", bottom: 32 }}
-        />
-      </Container>
+      />
+      <Background sx={sxBackground} />
     </ProductHeroLayoutRoot>
   );
 }
