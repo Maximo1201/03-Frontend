@@ -1,4 +1,4 @@
-import { Typography, Card, Box } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import Image from "next/image";
 
 interface ICardRutaProps {
@@ -16,16 +16,6 @@ const CardRuta = ({ icono, titulo, descripcion }: ICardRutaProps) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "0.5rem",
-        width: {
-          xs: "11rem",
-          md: "14rem",
-          lg: '22rem'
-        },
-        height: {
-          xs: "10rem",
-          md: '13rem',
-          lg: '16rem',
-        },
         bgcolor: "#001D3D",
         boxShadow: "0",
       }}
@@ -45,12 +35,7 @@ const CardRuta = ({ icono, titulo, descripcion }: ICardRutaProps) => {
       <Typography
         variant="h5"
         color="#FFC300"
-        fontSize={{
-          xs: "0.7rem",
-          sm: "0.8rem",
-          md: "1rem",
-          lg: '1.6rem'
-        }}
+        fontSize="1rem"
         fontWeight={"800"}
       >
         {titulo}
@@ -58,12 +43,7 @@ const CardRuta = ({ icono, titulo, descripcion }: ICardRutaProps) => {
       <Typography
         paragraph
         color="#FFFFFF"
-        fontSize={{
-          xs: "0.6rem",
-          sm: "0.7rem",
-          md: "0.9rem",
-          lg: '1.4rem'
-        }}
+        fontSize="1rem"
         fontWeight={"500"}
         sx={{
           width: "100%",

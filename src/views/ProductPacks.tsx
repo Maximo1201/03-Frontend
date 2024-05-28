@@ -55,16 +55,14 @@ const packsManual = [
 export default function ProductPacks() {
   return (
     <Box sx={{
-      mt: 8,
       mb: 4,
       backgroundImage: `url('img/wallpapers/section-packs.svg')`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: "center -4px",
     }}>
     <Container
       component="section"
-     
     >
       <Typography variant="h4" marked="center" align="center" component="h2" sx={{color: "white"}}>
         ¡ELEGÍ TU PACK DE MANEJO!
