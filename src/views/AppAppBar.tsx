@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import Image from "next/image";
 import AppBar from "../components/AppBar";
 import Toolbar from "../components/Toolbar";
 import Button from "@mui/material/Button";
@@ -88,6 +89,7 @@ function AppAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+
           </Box>
         </Toolbar>
 
