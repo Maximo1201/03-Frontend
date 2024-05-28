@@ -1,8 +1,7 @@
-import * as React from "react";
+import Box from "@mui/material/Box";
 import { Theme, styled } from "@mui/material/styles";
 import { SxProps } from "@mui/system";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
+import * as React from "react";
 
 const ProductHeroLayoutRoot = styled("section")(({ theme }) => ({
   color: theme.palette.common.white,
@@ -37,7 +36,7 @@ export default function ProductHeroLayout(
   const { sxBackground, children } = props;
 
   return (
-    <ProductHeroLayoutRoot sx={{ margin: "85px 0 0" }}>
+    <ProductHeroLayoutRoot sx={{ margin: "85px 0 0" }} id="Inicio">
       <Box sx={{ flex: 1, width: "100%", display: "flex" }}>
         <Box sx={{ ml: "auto", width: "700px" }}>
           {children}

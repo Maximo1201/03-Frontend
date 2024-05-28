@@ -54,7 +54,7 @@ const packsManual = [
 
 export default function ProductPacks() {
   return (
-    <Box sx={{
+    <Box id="Packs de clases" sx={{
       mb: 4,
       backgroundImage: `url('img/wallpapers/section-packs.svg')`,
       backgroundRepeat: "no-repeat",
