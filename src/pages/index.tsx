@@ -4,14 +4,15 @@ import AppFooter from "../views/AppFooter";
 import ProductHero from "../views/ProductHero";
 import ProductHowItWorks from "../views/ProductHowItWorks";
 import ProductPacks from "../views/ProductPacks";
-import ProductValues from "../views/ProductValues";
+import ComienzaTuRuta from "./ComienzaTuRuta";
 
 export default function Home() {
   return (
     <>
       <AppAppBar />
       <ProductHero />
-      <ProductValues />
+      <ComienzaTuRuta />
+      {/* <ProductValues /> */}
       <ProductPacks />
       <ProductHowItWorks />
       {/* <ProductCTA /> */}
