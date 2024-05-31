@@ -59,7 +59,7 @@ export default function ProductPacks() {
       backgroundImage: `url('img/wallpapers/section-packs.svg')`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-      backgroundPosition: "center -4px",
+      backgroundPosition: "center -8px",
     }}>
     <Container
       component="section"
