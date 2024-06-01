@@ -2,12 +2,11 @@ import { Box, Button } from "@mui/material";
 import Typography from "../components/Typography";
 import ProductHeroLayout from "./ProductHeroLayout";
 
-const backgroundImage = "/heroImagen.jpg";
+const backgroundImage = "/img/wallpapers/heroImagen.jpg";
 
 export default function ProductHero() {
   return (
     <ProductHeroLayout
-    
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundColor: "#7fc7d9", // Average color of the background image.
