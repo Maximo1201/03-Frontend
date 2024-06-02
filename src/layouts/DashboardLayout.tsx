@@ -229,7 +229,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{width: open ? "calc(100% - 300px)" : "90%"}}>
         <DrawerHeader />
         {children}
       </Box>
