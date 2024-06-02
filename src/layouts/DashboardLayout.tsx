@@ -166,7 +166,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           <NavBarDashboard />
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open} sx={{ background: "red" }}>
+      <Drawer variant="permanent" open={open} >
         <DrawerHeader id="drawer-header">
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
