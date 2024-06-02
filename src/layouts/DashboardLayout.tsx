@@ -106,6 +106,8 @@ const Drawer = styled(MuiDrawer, {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": {
       backgroundColor: "#001D3D",
+      backgroundImage: "url('/img/wallpapers/Group 2.png')",
+      backgroundPositionY:"80%",
       ...openedMixin(theme),
     },
   }),
@@ -113,6 +115,8 @@ const Drawer = styled(MuiDrawer, {
     ...closedMixin(theme),
     "& .MuiDrawer-paper": {
       backgroundColor: "#001D3D",
+      backgroundImage: "url('/img/wallpapers/Group 2.png')",
+      backgroundPositionY:"80%",
       ...closedMixin(theme),
     },
   }),
@@ -142,7 +146,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", overflow: "hidden" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
