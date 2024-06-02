@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.carousel.carousel-slider{
+    overflow:visible !important;
+}
