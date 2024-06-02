@@ -110,8 +110,10 @@ function Dashboard() {
         setCenterSlidePercentage(100);
       } else if (window.innerWidth <= 768) {
         setCenterSlidePercentage(75);
+      } else if (window.innerWidth <= 1115) {
+        setCenterSlidePercentage(33.3);
       } else {
-        setCenterSlidePercentage(33.33);
+        setCenterSlidePercentage(22);
       }
     };
 
@@ -126,14 +128,12 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
-      <Box sx={{ padding: {
-        xs: "2rem 0",
-        sm: "2rem 0",
-        md: "1rem",
-        lg: "1rem",
-        xl: "1rem",
-
-      }, width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" } }}>
+      <Box
+        sx={{
+          padding: "2rem 0",
+          width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+        }}
+      >
         <Typography
           variant="h4"
           component="h1"
@@ -143,6 +143,7 @@ function Dashboard() {
             fontWeight: 700,
             display: "flex",
             justifyContent: "center",
+            textAlign: "center",
           }}
         >
           MIS PROXIMOS TURNOS
@@ -192,6 +193,7 @@ function Dashboard() {
                 fontWeight: 700,
                 display: "flex",
                 justifyContent: "center",
+                textAlign: "center",
               }}
             >
               Mi Progreso
@@ -216,6 +218,7 @@ function Dashboard() {
                 fontWeight: 700,
                 display: "flex",
                 justifyContent: "center",
+                textAlign: "center",
               }}
             >
               8 de 10 Clases
@@ -223,13 +226,18 @@ function Dashboard() {
           </Box>
 
           <Divider orientation="vertical" flexItem sx={{ color: "#000" }} />
-          <Box sx={{ padding: "1rem", maxWidth: {
-            xs: "100%",
-            sm: "100%",
-            md: "85%",
-            lg: "85%",
-            xl: "85%",
-          } }}>
+          <Box
+            sx={{
+              padding: "1rem",
+              maxWidth: {
+                xs: "100%",
+                sm: "100%",
+                md: "85%",
+                lg: "85%",
+                xl: "85%",
+              },
+            }}
+          >
             <Typography
               component="h5"
               variant="h5"
@@ -245,6 +253,7 @@ function Dashboard() {
                 padding: ".5rem 2rem",
                 borderRadius: "5px",
                 margin: "0 auto",
+                textAlign: "center",
               }}
             >
               Tenes un Pack Activo, conoce la agenda de tus turnos
@@ -268,7 +277,7 @@ function Dashboard() {
                       zIndex: 20,
                       top: "50%",
                       transform: "translateY(-50%)",
-                      left: "calc(97% - 100%)",
+                      left: -25,
                       color: "black",
                       border: "none",
                       padding: "10px",
@@ -320,7 +329,6 @@ function Dashboard() {
                 },
                 alignItems: "center",
                 justifyContent: "space-between",
-                
                 gap: "1rem",
               }}
             >
@@ -332,6 +340,7 @@ function Dashboard() {
                   fontSize: "1rem",
                   fontWeight: 600,
                   width: "100%",
+                  textAlign: "center",
                 }}
               >
                 <WarningIcon
@@ -339,6 +348,7 @@ function Dashboard() {
                     color: "warning.main",
                     fontSize: "1.5rem",
                     marginRight: ".5rem",
+                    textAlign: "center",
                   }}
                 />
                 Recordá que tus clases tienen una duración de 60 minutos
@@ -374,6 +384,7 @@ function Dashboard() {
             fontWeight: 700,
             display: "flex",
             justifyContent: "center",
+            textAlign: "center",
           }}
         >
           ¡ELEGÍ TU PACK DE MANEJO!
@@ -393,6 +404,7 @@ function Dashboard() {
             padding: ".5rem 2rem",
             borderRadius: "5px",
             margin: "0 auto",
+            textAlign: "center",
           }}
         >
           Packs con Caja Automática
