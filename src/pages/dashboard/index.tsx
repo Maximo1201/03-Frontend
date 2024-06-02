@@ -240,7 +240,7 @@ function Dashboard() {
                       zIndex: 20,
                       top: "50%",
                       transform: "translateY(-50%)",
-                      left: -25,
+                      left: "calc(97% - 100%)",
                       color: "black",
                       border: "none",
                       padding: "10px",
