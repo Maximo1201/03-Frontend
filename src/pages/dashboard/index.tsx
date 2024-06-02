@@ -1,8 +1,8 @@
 import CardPack from "@/container/CardPack";
 import CardTurnos from "@/container/CardTurnos";
 import DashboardLayout from "@/layouts/DashboardLayout";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import WarningIcon from "@mui/icons-material/Warning";
 import { Box, CircularProgress, Divider, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -106,8 +106,10 @@ function Dashboard() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 780) {
+      if (window.innerWidth <= 480) {
         setCenterSlidePercentage(100);
+      } else if (window.innerWidth <= 768) {
+        setCenterSlidePercentage(75);
       } else {
         setCenterSlidePercentage(33.33);
       }
@@ -124,7 +126,14 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
-      <Box sx={{ padding: "1rem", width: "100%" }}>
+      <Box sx={{ padding: {
+        xs: "2rem 0",
+        sm: "2rem 0",
+        md: "1rem",
+        lg: "1rem",
+        xl: "1rem",
+
+      }, width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" } }}>
         <Typography
           variant="h4"
           component="h1"
@@ -149,14 +158,27 @@ function Dashboard() {
             padding: "1rem",
             boxShadow: "inset 0px 0px 10px 0px rgba(0,0,0,0.1)",
             border: "1px solid #e0e0e0",
+            flexDirection: {
+              xs: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            },
           }}
         >
           <Box
             sx={{
               padding: "1rem",
-              width: "15%",
-              display: "flex",
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "15%",
+                lg: "15%",
+                xl: "15%",
+              },
               flexDirection: "column",
+              display: "flex",
               alignItems: "center",
               gap: "1rem",
             }}
@@ -201,7 +223,13 @@ function Dashboard() {
           </Box>
 
           <Divider orientation="vertical" flexItem sx={{ color: "#000" }} />
-          <Box sx={{ padding: "1rem", maxWidth: "85%" }}>
+          <Box sx={{ padding: "1rem", maxWidth: {
+            xs: "100%",
+            sm: "100%",
+            md: "85%",
+            lg: "85%",
+            xl: "85%",
+          } }}>
             <Typography
               component="h5"
               variant="h5"
@@ -246,8 +274,9 @@ function Dashboard() {
                       padding: "10px",
                     }}
                   >
-                                    <KeyboardArrowLeftIcon  sx={{color: "black", fontSize: "2rem"}} />
-
+                    <KeyboardArrowLeftIcon
+                      sx={{ color: "black", fontSize: "2rem" }}
+                    />
                   </button>
                 )
               }
@@ -268,7 +297,9 @@ function Dashboard() {
                       padding: "10px",
                     }}
                   >
-                    <ChevronRightIcon sx={{color: "black", fontSize: "2rem"}} />
+                    <ChevronRightIcon
+                      sx={{ color: "black", fontSize: "2rem" }}
+                    />
                   </button>
                 )
               }
@@ -280,8 +311,16 @@ function Dashboard() {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: {
+                  xs: "column",
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                },
                 alignItems: "center",
+                justifyContent: "space-between",
+                
                 gap: "1rem",
               }}
             >
@@ -383,8 +422,9 @@ function Dashboard() {
                   padding: "10px",
                 }}
               >
-                <KeyboardArrowLeftIcon  sx={{color: "black", fontSize: "3rem"}} />
-
+                <KeyboardArrowLeftIcon
+                  sx={{ color: "black", fontSize: "3rem" }}
+                />
               </button>
             )
           }
@@ -405,7 +445,7 @@ function Dashboard() {
                   padding: "10px",
                 }}
               >
-                <ChevronRightIcon sx={{color: "black", fontSize: "3rem"}} />
+                <ChevronRightIcon sx={{ color: "black", fontSize: "3rem" }} />
               </button>
             )
           }
