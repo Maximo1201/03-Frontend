@@ -18,13 +18,13 @@ export default function AppFooter() {
       component="footer"
       sx={{ display: "flex", bgcolor: "primary.main" }}
     >
-      <Container sx={{ my: 4 }}>
+      <Container sx={{ my: 2 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Typography
                 gutterBottom
-                sx={{ color: "secondary.main", fontSize: 25, fontWeight: 700}}
+                sx={{ color: "secondary.main", fontSize: 15, fontWeight: 700}}
               >
                 SIGUE NUESTRAS REDES SOCIALES
               </Typography>
@@ -70,14 +70,14 @@ export default function AppFooter() {
               <Typography
                 variant="h4"
                 gutterBottom
-                sx={{ color: "secondary.main" }}
+                sx={{ color: "secondary.main" ,fontSize: 22, fontWeight: 700}}
               >
                 DRIVE FLUENCY
               </Typography>
               <Typography
                 variant="h4"
                 gutterBottom
-                sx={{ color: "secondary.light" }}
+                sx={{ color: "secondary.light", fontSize: 22, fontWeight: 700}}
               >
                 APRENDÉ A CONDUCIR
               </Typography>
