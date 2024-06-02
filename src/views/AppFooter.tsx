@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Image from "next/image";
 import Typography from "../components/Typography";
 
 const iconStyle = {
@@ -31,7 +30,7 @@ export default function AppFooter() {
               </Typography>
               <Box sx={{ display: "flex" }}>
                 <Box sx={iconStyle}>
-                  <Image
+                  <img
                     src="icons/facebook.svg"
                     alt="facebook"
                     width={48}
@@ -39,7 +38,7 @@ export default function AppFooter() {
                   />
                 </Box>
                 <Box sx={iconStyle}>
-                  <Image
+                  <img
                     src="icons/instagram.svg"
                     alt="instagram"
                     width={45}
@@ -47,7 +46,7 @@ export default function AppFooter() {
                   />
                 </Box>
                 <Box sx={iconStyle}>
-                  <Image
+                  <img
                     src="icons/linkedIn.svg"
                     alt="twitter"
                     width={48}
@@ -55,7 +54,7 @@ export default function AppFooter() {
                   />
                 </Box>
                 <Box sx={iconStyle}>
-                  <Image
+                  <img
                     src="icons/tiktok.svg"
                     alt="youtube"
                     width={48}

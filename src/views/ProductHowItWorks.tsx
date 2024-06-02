@@ -41,7 +41,6 @@ function ProductHowItWorks() {
       >
         <Box
           component="img"
-          src="/productCurvyLines.png"
           alt="curvy lines"
           sx={{
             pointerEvents: "none",
