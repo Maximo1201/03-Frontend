@@ -131,7 +131,6 @@ function Dashboard() {
       <Box
         sx={{
           padding: "2rem 0",
-          width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
         }}
       >
         <Typography
@@ -154,7 +153,7 @@ function Dashboard() {
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
-            mx: 3,
+            mx: { xs: 0, sm: 3, md: 3, lg: 3 },
             borderRadius: "10px",
             padding: "1rem",
             boxShadow: "inset 0px 0px 10px 0px rgba(0,0,0,0.1)",
