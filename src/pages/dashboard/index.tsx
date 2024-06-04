@@ -1,10 +1,17 @@
 import CardPack from "@/container/CardPack";
 import CardTurnos from "@/container/CardTurnos";
 import DashboardLayout from "@/layouts/DashboardLayout";
+import DialogSchedule from "@/views/DialogSchedule";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import WarningIcon from "@mui/icons-material/Warning";
-import { Box, CircularProgress, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  Divider,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import { useTheme } from "@mui/material/styles";
 import { useEffect, useState } from "react";
@@ -101,6 +108,16 @@ const packsAutomat = [
 
 function Dashboard() {
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const [centerSlidePercentage, setCenterSlidePercentage] = useState(33.33);
 
@@ -364,6 +381,7 @@ function Dashboard() {
                   fontWeight: 700,
                   whiteSpace: "nowrap",
                 }}
+                onClick={handleClickOpen}
               >
                 AGENDAR PRÓXIMO TURNO
               </button>
@@ -466,6 +484,8 @@ function Dashboard() {
           ))}
         </Carousel>
       </Box>
+
+      <DialogSchedule open={open} handleClose={handleClose} fullScreen={fullScreen} />
     </DashboardLayout>
   );
 }
