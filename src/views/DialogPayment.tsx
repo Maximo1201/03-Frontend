@@ -1,13 +1,13 @@
 import CompraStepper from '@/components/stepperCompra';
 import Dialog from '@mui/material/Dialog';
 
-interface DialogScheduleProps {
+interface DialogPaymentProps {
     open: boolean;
     handleClose: () => void;
     fullScreen: boolean;
 }
 
-const DialogSchedule = ({open, handleClose, fullScreen}: DialogScheduleProps) => {
+const DialogPayment = ({open, handleClose, fullScreen}: DialogPaymentProps) => {
   return (
     <Dialog
     fullScreen={fullScreen}
@@ -21,4 +21,4 @@ const DialogSchedule = ({open, handleClose, fullScreen}: DialogScheduleProps) =>
   )
 }
 
-export default DialogSchedule
+export default DialogPayment

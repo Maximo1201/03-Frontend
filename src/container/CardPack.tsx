@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Link from "next/link";
 
 interface CardPackProps {
   caption: string;
@@ -12,9 +11,10 @@ interface CardPackProps {
   description: string;
   price?: number;
   image?: string;
+  handleOpen?: () => void;
 }
 
-function CardPack({ image, caption, title, description, price }: CardPackProps) {
+function CardPack({ image, caption, title, description, price, handleOpen }: CardPackProps) {
   return (
     <Card sx={{ maxWidth: 345, minWidth: 245, margin: "1rem auto" }} elevation={3}>
       <CardActionArea sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start",textAlign: "left" }} >
@@ -90,6 +90,7 @@ function CardPack({ image, caption, title, description, price }: CardPackProps) 
             backgroundColor: "secondary.main",
             fontWeight: 900,
           }}
+          onClick={handleOpen}
         >
           COMPRAR
         </Button>
